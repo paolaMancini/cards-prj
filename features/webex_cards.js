@@ -1,6 +1,7 @@
 //
 // Demo interactive adaptive cards
 //
+/**
 module.exports = function(controller) {
 
     controller.adapter.registerAdaptiveCardWebhookSubscription( controller.getConfig( 'webhook_uri' ) );
@@ -148,4 +149,4 @@ module.exports = function(controller) {
 
     controller.commandHelp.push( { command: 'monitor', text: 'Demo interactive adaptive cards' } );
 
-}
+}**/
