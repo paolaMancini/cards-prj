@@ -248,7 +248,7 @@ module.exports = function (controller) {
                         }
                     ]
                 }
-            ]
+            }]
         })
     })
 
