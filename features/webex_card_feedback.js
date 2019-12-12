@@ -242,7 +242,7 @@ module.exports = function (controller) {
     controller.on('attachmentActions', async (bot, message) => {
 
         //let hostName = message.value.vmlist;
-        console.log("message: ",message);
+        console.log("message.inputs: ",message.inputs);
 
         await bot.reply(message, "Ok");
     })
