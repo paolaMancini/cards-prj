@@ -4,11 +4,11 @@
   "description": "Botkit project for creating bot managing cards",
   "main": "bot.js",
   "scripts": {
-    "test": "node bot.js"
+    "start": "node bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paolaMancini/cards-prj.git"
+    "url": "https://github.com/paolaMancini/cards-prj.git"
   },
   "author": "Paola Mancini",
   "license": "MIT",
