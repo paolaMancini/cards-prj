@@ -246,7 +246,7 @@ module.exports = function (controller) {
         console.log("from: " ,message.from.id");
         
         //t id = await bot.api.;
-        console.log("members: ",members);
+        //console.log("members: ",members);
         await bot.reply(message, "Ok");
     })
 
