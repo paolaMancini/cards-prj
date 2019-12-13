@@ -243,7 +243,9 @@ module.exports = function (controller) {
 
         //let hostName = message.value.vmlist;
         console.log("message: ",message);
-        let members = await bot.api.memberships.get(message.channel);
+        console.log("from: " ,message.from.id");
+        
+        //t id = await bot.api.;
         console.log("members: ",members);
         await bot.reply(message, "Ok");
     })
