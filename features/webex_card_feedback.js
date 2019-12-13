@@ -242,8 +242,9 @@ module.exports = function (controller) {
     controller.on('attachmentActions', async (bot, message) => {
 
         //let hostName = message.value.vmlist;
-        console.log("message.inputs: ",message.inputs);
-
+        console.log("message: ",message);
+        let members = await bot.api.memberships.get(message.channel);
+        console.log("members: ",members);
         await bot.reply(message, "Ok");
     })
 
