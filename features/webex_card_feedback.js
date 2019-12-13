@@ -243,7 +243,10 @@ module.exports = function (controller) {
 
         //let hostName = message.value.vmlist;
         console.log("message: ",message);
-        //console.log("from: " ,message.from.id");
+        console.log("from: " ,message.personId");
+         
+         let details= bot.api.people.get(message.personId);
+         console.log("from details : " ,details);
         
         //t id = await bot.api.;
         //console.log("members: ",members);
