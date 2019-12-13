@@ -243,7 +243,8 @@ module.exports = function (controller) {
 
         //let hostName = message.value.vmlist;
         console.log("message: ",message);
-        console.log("from: " ,message.personId");
+         console.log("message: ",message.inputs);
+       // console.log("from: " ,message.personId");
          
         // let details= bot.api.people.get(message.personId);
          //console.log("from details : " ,details);
