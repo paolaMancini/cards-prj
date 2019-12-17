@@ -244,7 +244,7 @@ module.exports = function (controller) {
 
         //let hostName = message.value.vmlist;
        console.log("message: ",message);
-          console.log("MESSAGE from: " + message.personEmail);
+          //console.log("MESSAGE from: " + message.personEmail);
        //console.log("message: ",message.inputs);
        console.log("========> from: " +message.personId");
          
