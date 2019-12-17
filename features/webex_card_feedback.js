@@ -240,20 +240,44 @@ module.exports = function (controller) {
     })
     
     
-    controller.on('attachmentActions', async (bot, message) => {
+     
+    
+                   
+     controller.on( 'attachmentActions', async ( bot, message ) => {
 
-        //let hostName = message.value.vmlist;
+   
+             //let hostName = message.value.vmlist;
        console.log("message: ",message);
           //console.log("MESSAGE from: " + message.personEmail);
        //console.log("message: ",message.inputs);
        console.log("========> from: " +message.personId");
-         
-        // let details= bot.api.people.get(message.personId);
-         //console.log("from details : " ,details);
-   
-        await bot.reply(message, "Ok");
+        let from= message.personId
+
+        await bot.reply( message, {
+            text: 'Answer',
+            attachments: [
+                {
+                    'contentType': 'application/vnd.microsoft.card.adaptive',
+                    'content': {
+                        'type': 'AdaptiveCard',
+                        'version': '1.0',
+                         "body": [
+                            {
+                                "type": "TextBlock",
+                                "wrap": true,
+                                "text": "Hi {{}}, Your message has been sent to Paola. Thank you.",
+                                "horizontalAlignment": "Center",
+                                "color": "Accent",
+                                "weight": "Bolder"
+                            }
+                        ]
+                        '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json'
+                    }
+                }
+            ]
+        })
     })
 
-    //controller.commandHelp.push({ command: 'monitor', text: 'Demo interactive adaptive cards' });
+    controller.commandHelp.push( { command: 'monitor', text: 'Demo interactive adaptive cards' } );
 
 }
