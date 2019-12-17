@@ -278,6 +278,6 @@ module.exports = function (controller) {
         })
     })
 
-    controller.commandHelp.push( { command: 'monitor', text: 'Demo interactive adaptive cards' } );
+    controller.commandHelp.push( { command: 'feedback_card', text: 'Demo interactive adaptive cards' } );
 
 }
