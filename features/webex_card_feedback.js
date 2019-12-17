@@ -270,7 +270,7 @@ module.exports = function (controller) {
                                 "color": "Accent",
                                 "weight": "Bolder"
                             }
-                        ]
+                        ],
                         '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json'
                     }
                 }
