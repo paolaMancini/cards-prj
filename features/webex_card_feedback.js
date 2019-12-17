@@ -250,8 +250,8 @@ module.exports = function (controller) {
        console.log("message: ",message);
           //console.log("MESSAGE from: " + message.personEmail);
        //console.log("message: ",message.inputs);
-       console.log("========> from: " +message.personId");
-        let from= message.personId
+       //console.log("========> from: " +message.personId");
+       // let from= message.personId;
 
         await bot.reply( message, {
             text: 'Answer',
