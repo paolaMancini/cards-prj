@@ -238,11 +238,13 @@ module.exports = function (controller) {
                 }]
         })
     })
-
+    
+    
     controller.on('attachmentActions', async (bot, message) => {
 
         //let hostName = message.value.vmlist;
        console.log("message: ",message);
+          console.log("MESSAGE from: " + message.personEmail);
        //console.log("message: ",message.inputs);
        console.log("========> from: " ,message.personId");
          
