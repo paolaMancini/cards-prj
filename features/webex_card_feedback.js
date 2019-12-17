@@ -254,6 +254,6 @@ module.exports = function (controller) {
         await bot.reply(message, "Ok");
     })
 
-    controller.commandHelp.push({ command: 'monitor', text: 'Demo interactive adaptive cards' });
+    //controller.commandHelp.push({ command: 'monitor', text: 'Demo interactive adaptive cards' });
 
 }
