@@ -249,8 +249,9 @@ module.exports = function (controller) {
        console.log("message: ",message);
        //  console.log("MESSAGE from: " ,message.personId);
        //console.log("message: ",message.inputs);
-       //console.log("========> from: " +message.personId");
-       // let from= message.personId;
+       
+       let from= message.incoming_message.id;
+       console.log("========> from: " +from);
 
         await bot.reply( message, {
             text: 'Answer',
