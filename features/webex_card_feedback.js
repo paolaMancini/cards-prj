@@ -252,8 +252,7 @@ module.exports = function (controller) {
        
        let from= message.incoming_message.from.id;
        console.log("========> from: " +from);
-       var personId = message.original_message.actorId;
-       console.log("========> personId: " +personId);
+ 
       /** bot.startPrivateConversationWithActor(message, function(err, convo) {
             convo.say('The bot you invited has joined the channel.');
        }**/
