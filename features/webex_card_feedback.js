@@ -250,7 +250,7 @@ module.exports = function (controller) {
        //  console.log("MESSAGE from: " ,message.personId);
        //console.log("message: ",message.inputs);
        
-       let from= message.incoming_message.id;
+       let from= message.from.id;
        console.log("========> from: " +from);
 
         await bot.reply( message, {
@@ -265,7 +265,7 @@ module.exports = function (controller) {
                             {
                                 "type": "TextBlock",
                                 "wrap": true,
-                                "text": "Hi {{}}, Your message has been sent to Paola. Thank you.",
+                                "text": "Message sent! Thank you "+'from',
                                 "horizontalAlignment": "Center",
                                 "color": "Accent",
                                 "weight": "Bolder"
