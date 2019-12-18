@@ -252,6 +252,16 @@ module.exports = function (controller) {
        
        let from= message.incoming_message.from.id;
        console.log("========> from: " +from);
+       var personId = message.original_message.actorId;
+       console.log("========> personId: " +personId);
+      /** bot.startPrivateConversationWithActor(message, function(err, convo) {
+            convo.say('The bot you invited has joined the channel.');
+       }**/
+         
+         let email = await bot.api.people.create({
+            id: personId,
+        });
+         console.log ("email= "+email);
 
         await bot.reply( message, {
             text: 'Answer',
@@ -265,7 +275,7 @@ module.exports = function (controller) {
                             {
                                 "type": "TextBlock",
                                 "wrap": true,
-                                "text": "Message sent! Thank you "+'from',
+                                "text": "Message sent! Thank you "+'email',
                                 "horizontalAlignment": "Center",
                                 "color": "Accent",
                                 "weight": "Bolder"
