@@ -259,7 +259,7 @@ module.exports = function (controller) {
        }**/
          
          let email = await bot.api.people.list({
-            id: personId,
+            id: from,
         });
          console.log ("email= "+email);
 
