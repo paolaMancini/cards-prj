@@ -257,7 +257,7 @@ module.exports = function (controller) {
             convo.say('The bot you invited has joined the channel.');
        }**/
          
-         let email = await bot.api.people.list({
+         let email = await bot.api.people.get({
             id: from,
         });
          console.log ("email= "+email);
