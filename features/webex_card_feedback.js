@@ -7,47 +7,59 @@ module.exports = function (controller) {
     controller.hears('feedback_card', 'message,direct_message', async (bot, message) => {
         await bot.reply(message, "Please, compile the following feedback card");
         await bot.reply(message, {
-            text: 'VM Monitor',
-            attachments: [
-                {
-                    'contentType': 'application/vnd.microsoft.card.adaptive',
-                    'content': {
-                        'type': 'AdaptiveCard',
-                        'version': '1.0',
-                        'body': [
+            text: 'Best Wishes from Paola Mancini',
+             attachments: [
                             {
-                                'type': 'Image',
-                                'url': 'https://www.tdevents.it/wp-content/uploads/2019/11/cisco-ok.jpg',
-                                'size': 'auto'
+                                "contentType": "application/vnd.microsoft.card.adaptive",
+                                "content": {
+                                    "type": "AdaptiveCard",
+                                    "version": "1.0",
+                                      "body": [
+                            {
+                                "type": "Image",
+                                "url": "https://i.pinimg.com/736x/17/9c/fc/179cfcd504475b3df212495cf9012e0e.jpg",
+                                "size": "auto"
                             },
                             {
-                                'type': 'ColumnSet',
-                                'columns': [
+                                "type": "ColumnSet",
+                                "columns": [
                                     {
-                                        'type': 'Column',
-                                        'width': 2,
-                                        'items': [
+                                        "type": "Column",
+                                        "width": 2,
+                                        "items": [
                                             {
-                                                'type': 'TextBlock',
-                                                'text': 'Tell us what you think about the TechData DevNet Training',
-                                                'weight': 'Bolder',
-                                                'size': 'Medium'
+                                                "type": "TextBlock",
+                                                "text": "May this Christmas fill your heart with warmth and love. I wish you  joy and serendipity for the new year!",
+                                                "weight": "Bolder",
+                                                "size": "Medium",
+                                                "horizontalAlignment": "Center",
+                                                "wrap": true,
+                                                "spacing": "Small"
                                             },
                                             {
-                                                'type': 'TextBlock',
-                                                'text': 'Your name',
-                                                'wrap': true
+                                                "type": "TextBlock",
+                                                "text": "Leave your whishes for Paola",
+                                                "wrap": true
                                             },
                                             {
-                                                'type': 'Input.Text',
-                                                'id': 'myName',
-                                                'placeholder': 'Last, First'
+                                                "type": "Input.Text",
+                                                "id": "myName",
+                                                "placeholder": "..."
                                             }
                                         ]
                                     }
                                 ]
                             }
+                        ],
+                                      "actions": [
+                                             {
+                                               "type": "Action.Submit",
+                                               "title": "Send"
 
+                                            }
+                                        ]
+                                }
+                            }
                         ],
                         'actions': [
                             {
