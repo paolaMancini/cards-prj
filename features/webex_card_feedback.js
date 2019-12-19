@@ -4,17 +4,17 @@
 module.exports = function (controller) {
 
     controller.adapter.registerAdaptiveCardWebhookSubscription(controller.getConfig('webhook_uri'));
-    controller.hears('feedback_card', 'message,direct_message', async (bot, message) => {
-        await bot.reply(message, "Please, compile the following feedback card");
+controller.hears('feedback_card', 'message,direct_message', async (bot, message) => {
+      //  await bot.reply(message, "Please, compile the following feedback card");
         await bot.reply(message, {
             text: 'Best Wishes from Paola Mancini',
-             attachments: [
-                            {
-                                "contentType": "application/vnd.microsoft.card.adaptive",
-                                "content": {
-                                    "type": "AdaptiveCard",
-                                    "version": "1.0",
-                                      "body": [
+            attachments: [
+                {
+                    "contentType": "application/vnd.microsoft.card.adaptive",
+                    "content": {
+                        "type": "AdaptiveCard",
+                        "version": "1.0",
+                        "body": [
                             {
                                 "type": "Image",
                                 "url": "https://i.pinimg.com/736x/17/9c/fc/179cfcd504475b3df212495cf9012e0e.jpg",
@@ -51,203 +51,16 @@ module.exports = function (controller) {
                                 ]
                             }
                         ],
-                                      "actions": [
-                                             {
-                                               "type": "Action.Submit",
-                                               "title": "Send"
-
-                                            }
-                                        ]
-                                }
-                            }
-                        ],
-                        'actions': [
+                        "actions": [
                             {
-                                'type': 'Action.ShowCard',
-                                'title': 'Bot, B&C',
-                                'card': {
-                                    'type': 'AdaptiveCard',
-                                    'body': [
+                                "type": "Action.Submit",
+                                "title": "Send"
 
-                                        {
-                                            'type': 'Input.ChoiceSet',
-                                            'id': 'botsId',
-                                            'style': 'expanded',
-                                            'choices': [
-                                                {
-                                                    'title': 'Below Expectations',
-                                                    'value': 'Below Expectations'
-                                                },
-                                                {
-                                                    'title': 'Average',
-                                                    'value': 'Average'
-                                                },
-                                                {
-                                                    'title': 'Excellent',
-                                                    'value': 'Excellent'
-                                                }
-                                            ]
-                                        }
-                                    ],
-                                    'actions': [
-                                        {
-                                            'type': 'Action.Submit',
-                                            'title': 'OK',
-                                            'data': {
-                                                'BotChoice': 'bot'
-                                            }
-                                        }
-                                    ],
-                                    '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json'
-                                }
-                            },
-                            {
-                                'type': 'Action.ShowCard',
-                                'title': 'xAPI',
-                                'card': {
-                                    'type': 'AdaptiveCard',
-                                    'body': [
-
-                                        {
-                                            'type': 'Input.ChoiceSet',
-                                            'id': 'xAPI',
-                                            'style': 'expanded',
-                                            'choices': [
-                                                {
-                                                    'title': 'Below Expectations',
-                                                    'value': 'Below Expectations'
-                                                },
-                                                {
-                                                    'title': 'Average',
-                                                    'value': 'Average'
-                                                },
-                                                {
-                                                    'title': 'Excellent',
-                                                    'value': 'Excellent'
-                                                }
-                                            ]
-                                        }
-                                    ],
-                                    'actions': [
-
-                                    ],
-                                    '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json'
-                                }
-                            },
-                            {
-                                'type': 'Action.ShowCard',
-                                'title': 'Challenge',
-                                'card': {
-                                    'type': 'AdaptiveCard',
-                                    'body': [
-
-                                        {
-                                            'type': 'Input.ChoiceSet',
-                                            'id': 'Challenge',
-                                            'style': 'expanded',
-                                            'choices': [
-                                                {
-                                                    'title': 'Below Expectations',
-                                                    'value': 'Below Expectations'
-                                                },
-                                                {
-                                                    'title': 'Average',
-                                                    'value': 'Average'
-                                                },
-                                                {
-                                                    'title': 'Excellent',
-                                                    'value': 'Excellent'
-                                                }
-                                            ]
-                                        }
-                                    ],
-                                    'actions': [
-                                        {
-                                            'type': 'Action.Submit',
-                                            'title': 'OK',
-                                            'data': {
-                                                'ChallengeChoice': 'Challenge'
-                                            }
-                                        }
-                                    ],
-                                    '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json'
-                                }
-                            },
-                            {
-                                'type': 'Action.ShowCard',
-                                'title': 'Location',
-                                'card': {
-                                    'type': 'AdaptiveCard',
-                                    'body': [
-
-                                        {
-                                            'type': 'Input.ChoiceSet',
-                                            'id': 'Location',
-                                            'style': 'expanded',
-                                            'choices': [
-                                                {
-                                                    'title': 'Below Expectations',
-                                                    'value': 'Below Expectations'
-                                                },
-                                                {
-                                                    'title': 'Average',
-                                                    'value': 'Average'
-                                                },
-                                                {
-                                                    'title': 'Excellent',
-                                                    'value': 'Excellent'
-                                                }
-                                            ]
-                                        }
-                                    ],
-                                    'actions': [
-
-                                    ],
-                                    '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json'
-                                }
-                            },
-                            {
-                                'type': 'Action.ShowCard',
-                                'title': 'Organization',
-                                'card': {
-                                    'type': 'AdaptiveCard',
-                                    'body': [
-
-                                        {
-                                            'type': 'Input.ChoiceSet',
-                                            'id': 'Organization',
-                                            'style': 'expanded',
-                                            'choices': [
-                                                {
-                                                    'title': 'Below Expectations',
-                                                    'value': 'Below Expectations'
-                                                },
-                                                {
-                                                    'title': 'Average',
-                                                    'value': 'Average'
-                                                },
-                                                {
-                                                    'title': 'Excellent',
-                                                    'value': 'Excellent'
-                                                }
-                                            ]
-                                        }
-                                    ],
-                                    'actions': [
-                                        {
-                                            'type': 'Action.Submit',
-                                            'title': 'Submit',
-                                            'data': {
-                                                'OrganizationChoice': 'Organization'
-                                            }
-                                        }
-                                    ],
-                                    '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json'
-                                }
                             }
                         ]
                     }
-                }]
+                }
+            ]
         })
     })
     
