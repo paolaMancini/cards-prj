@@ -76,7 +76,9 @@ controller.hears('feedback_card', 'message,direct_message', async (bot, message)
        //console.log("message: ",message.inputs);
        
        let from= message.incoming_message.from.id;
+       var personId = message.original_message.actorId;
        console.log("========> from: " +from);
+       console.log("========> personId: " +personId);
  
       /** bot.startPrivateConversationWithActor(message, function(err, convo) {
             convo.say('The bot you invited has joined the channel.');
