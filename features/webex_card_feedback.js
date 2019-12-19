@@ -80,12 +80,67 @@ controller.hears('feedback_card', 'message,direct_message', async (bot, message)
        console.log("========> from: " +from);
        console.log("========> personId: " +personId);
  
-      /** bot.startPrivateConversationWithActor(message, function(err, convo) {
-            convo.say('The bot you invited has joined the channel.');
-       }**/
-         
-         let email = await bot.api.people.get(from);
-         console.log ("email= "+email);
+       bot.startPrivateConversation(personId) {
+            convo.say({
+            text: 'Best Wishes from Paola Mancini',
+            attachments: [
+                {
+                    "contentType": "application/vnd.microsoft.card.adaptive",
+                    "content": {
+                        "type": "AdaptiveCard",
+                        "version": "1.0",
+                        "body": [
+                            {
+                                "type": "Image",
+                                "url": "https://i.pinimg.com/736x/17/9c/fc/179cfcd504475b3df212495cf9012e0e.jpg",
+                                "size": "auto"
+                            },
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": 2,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "May this Christmas fill your heart with warmth and love. I wish you  joy and serendipity for the new year!",
+                                                "weight": "Bolder",
+                                                "size": "Medium",
+                                                "horizontalAlignment": "Center",
+                                                "wrap": true,
+                                                "spacing": "Small"
+                                            },
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "Leave your whishes for Paola",
+                                                "wrap": true
+                                            },
+                                            {
+                                                "type": "Input.Text",
+                                                "id": "myName",
+                                                "placeholder": "..."
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "type": "Action.Submit",
+                                "title": "Send"
+
+                            }
+                        ]
+                    }
+                }
+            ]
+        });
+       }
+ 
+    
+         console.log ("Done ==============================================>");
 
         await bot.reply( message, {
             text: 'Answer',
