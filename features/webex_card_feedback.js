@@ -92,7 +92,7 @@ module.exports = function (controller) {
                             {
                                 "type": "TextBlock",
                                 "wrap": true,
-                                "text": "Message sent! Thank you " + 'email',
+                                "text": "Message sent! Thank you " + 'personId',
                                 "horizontalAlignment": "Center",
                                 "color": "Accent",
                                 "weight": "Bolder"
