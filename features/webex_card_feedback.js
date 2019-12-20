@@ -4,7 +4,7 @@
 module.exports = function (controller) {
 
     controller.adapter.registerAdaptiveCardWebhookSubscription(controller.getConfig('webhook_uri'));
-    controller.hears('feedback_card', 'message,direct_message', async (bot, message) => {
+    controller.hears('xmasc-card', 'message,direct_message', async (bot, message) => {
         //  await bot.reply(message, "Please, compile the following feedback card");
         await bot.reply(message, {
             text: 'Best Wishes from Paola Mancini',
@@ -79,6 +79,10 @@ module.exports = function (controller) {
         console.log("========> from: " + from);
         console.log("========> personId: " + personId);
 
+        //get person name
+        let person = await bot.api.people.list(personId);
+        console.log ("$$$$$$$$ person: ", person);
+
 
         let reply = await bot.reply(message, {
             text: 'This message will be deleted in a few seconds.',
@@ -92,7 +96,7 @@ module.exports = function (controller) {
                             {
                                 "type": "TextBlock",
                                 "wrap": true,
-                                "text": "Message sent! Thank you " + `${ personId }`,
+                                "text": "Message sent! Thank you " + `${personId}`,
                                 "horizontalAlignment": "Center",
                                 "color": "Accent",
                                 "weight": "Bolder"
@@ -114,6 +118,6 @@ module.exports = function (controller) {
 
 
 
-    controller.commandHelp.push({ command: 'feedback_card', text: 'Demo interactive adaptive cards' });
+    controller.commandHelp.push({ command: 'xmas_card', text: 'Demo interactive adaptive cards' });
 
 }
