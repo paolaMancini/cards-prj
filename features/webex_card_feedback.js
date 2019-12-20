@@ -104,7 +104,7 @@ module.exports = function (controller) {
             ]
         });
         console.log("#### Deleting message= ");
-        setTimeout(function2, 5000);
+        setTimeout("Deleting message=", 5000);
         bot.deleteMessage();
     })
 
