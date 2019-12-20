@@ -80,8 +80,8 @@ module.exports = function (controller) {
         console.log("========> personId: " + personId);
 
 
-        await bot.reply(message, {
-            text: 'Answer',
+        let reply = await bot.reply(message, {
+            text: 'This message will be deleted in a few seconds.',
             attachments: [
                 {
                     'contentType': 'application/vnd.microsoft.card.adaptive',
@@ -103,11 +103,15 @@ module.exports = function (controller) {
                 }
             ]
         });
-        console.log("#### Deleting message= ");
-        // setTimeout("Deleting message=", 5000);
-        await bot.cancelAllDialogs();
+        setTimeout(async () => {
+            let res = await bot.deleteMessage(reply);
+        }, 5000);
+
 
     })
+
+
+
 
 
     controller.commandHelp.push({ command: 'feedback_card', text: 'Demo interactive adaptive cards' });
