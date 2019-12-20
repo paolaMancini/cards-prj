@@ -69,7 +69,7 @@ module.exports = function (controller) {
 
 
     controller.on('attachmentActions', async (bot, message) => {
-        
+
         console.log("message: ", message);
         //  console.log("MESSAGE from: " ,message.personId);
         //console.log("message: ",message.inputs);
@@ -80,7 +80,7 @@ module.exports = function (controller) {
         console.log("========> personId: " + personId);
 
 
-        await bot.reply(message, {
+        res= await bot.reply(message, {
             text: 'Answer',
             attachments: [
                 {
@@ -103,7 +103,7 @@ module.exports = function (controller) {
                 }
             ]
         });
-        console.log("#### Message.id= " + message);
+        console.log("#### res= " + RES);
     })
 
  
