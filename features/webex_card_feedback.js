@@ -80,7 +80,7 @@ module.exports = function (controller) {
         console.log("========> personId: " + personId);
 
 
-        res= await bot.reply(message, {
+        await bot.reply(message, {
             text: 'Answer',
             attachments: [
                 {
@@ -103,7 +103,9 @@ module.exports = function (controller) {
                 }
             ]
         });
-        console.log("#### res= " + RES);
+        console.log("#### Deleting message= ");
+        setTimeout(function2, 5000);
+        bot.deleteMessage();
     })
 
  
