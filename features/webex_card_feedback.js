@@ -80,7 +80,7 @@ module.exports = function (controller) {
         console.log("========> personId: " + personId);
 
         //get person name
-        let person = await bot.api.people.list(personId);
+        let person = await bot.api.people.list('id='+personId);
         console.log ("$$$$$$$$ person: ", person);
 
 
