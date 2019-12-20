@@ -69,8 +69,7 @@ module.exports = function (controller) {
 
 
     controller.on('attachmentActions', async (bot, message) => {
-
-        //let hostName = message.value.vmlist;
+        
         console.log("message: ", message);
         //  console.log("MESSAGE from: " ,message.personId);
         //console.log("message: ",message.inputs);
@@ -103,10 +102,11 @@ module.exports = function (controller) {
                     }
                 }
             ]
-        })
+        });
+        console.log("#### Message.id= " + message);
     })
 
-    console.log("#### Message.id= " + message);
+ 
     controller.commandHelp.push({ command: 'feedback_card', text: 'Demo interactive adaptive cards' });
 
 }
