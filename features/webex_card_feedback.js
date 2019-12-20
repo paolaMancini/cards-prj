@@ -16,6 +16,14 @@ module.exports = function (controller) {
                         "version": "1.0",
                         "body": [
                             {
+                                "type": "TextBlock",
+                                "text": "Christmas Card Messages by Paola Mancini, leveraging  Webex Teams Cards & Buttons",
+                                "color": "Accent",
+                                "wrap": true,
+                                "size": "Medium",
+                                "weight": "Bolder"
+                            },
+                            {
                                 "type": "Image",
                                 "url": "https://i.pinimg.com/736x/17/9c/fc/179cfcd504475b3df212495cf9012e0e.jpg",
                                 "size": "auto"
@@ -32,7 +40,7 @@ module.exports = function (controller) {
                                                 "text": "May this Christmas fill your heart with warmth and love. I wish you  joy and serendipity for the new year!",
                                                 "weight": "Bolder",
                                                 "size": "Medium",
-                                                "horizontalAlignment": "Center",
+                                                "horizontalAlignment": "Left",
                                                 "wrap": true,
                                                 "spacing": "Small"
                                             },
@@ -55,7 +63,6 @@ module.exports = function (controller) {
                             {
                                 "type": "Action.Submit",
                                 "title": "Send"
-
                             }
                         ]
                     }
@@ -97,7 +104,7 @@ module.exports = function (controller) {
                                 "type": "TextBlock",
                                 "wrap": true,
                                 "text": "Message sent! Thank you " + `${person.displayName}`,
-                                "horizontalAlignment": "Center",
+                                "horizontalAlignment": "Left",
                                 "color": "Accent",
                                 "weight": "Bolder"
                             }
@@ -118,6 +125,6 @@ module.exports = function (controller) {
 
 
 
-    controller.commandHelp.push({ command: 'xmas_card', text: 'Demo interactive adaptive cards' });
+    controller.commandHelp.push({ command: 'xmas_card', text: 'Demo with interactive adaptive cards. Just Paola can use this command' });
 
 }
