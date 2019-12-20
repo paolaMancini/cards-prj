@@ -8,7 +8,7 @@ module.exports = function (controller) {
     controller.hears('xmas_card', 'message,direct_message', async (bot, message) => {
         //  await bot.reply(message, "Please, compile the following feedback card");
         let from = await bot.api.people.get(message.actorId);
-        console.log("Message from: ", from);
+        console.log("Message from: ", from.displayName);
 
         if (from === 'Paola Mancini') {
             await bot.reply(message, {
