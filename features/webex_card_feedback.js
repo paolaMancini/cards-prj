@@ -81,7 +81,7 @@ module.exports = function (controller) {
 
         //get person name
         let person = await bot.api.people.list({
-            personId: message.user,
+            id: personId,
         });
         console.log("$$$$$$$$ person: ", person);
 
