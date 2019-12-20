@@ -96,7 +96,7 @@ module.exports = function (controller) {
                             {
                                 "type": "TextBlock",
                                 "wrap": true,
-                                "text": "Message sent! Thank you " + `${personId}`,
+                                "text": "Message sent! Thank you " + `${person.displayName}`,
                                 "horizontalAlignment": "Center",
                                 "color": "Accent",
                                 "weight": "Bolder"
