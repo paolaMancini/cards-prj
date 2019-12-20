@@ -104,11 +104,12 @@ module.exports = function (controller) {
             ]
         });
         console.log("#### Deleting message= ");
-        setTimeout("Deleting message=", 5000);
-        bot.deleteMessage();
+        // setTimeout("Deleting message=", 5000);
+        await bot.cancelAllDialogs();
+
     })
 
- 
+
     controller.commandHelp.push({ command: 'feedback_card', text: 'Demo interactive adaptive cards' });
 
 }
