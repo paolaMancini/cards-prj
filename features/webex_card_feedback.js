@@ -4,8 +4,8 @@
 module.exports = function (controller) {
 
     controller.adapter.registerAdaptiveCardWebhookSubscription(controller.getConfig('webhook_uri'));
-controller.hears('feedback_card', 'message,direct_message', async (bot, message) => {
-      //  await bot.reply(message, "Please, compile the following feedback card");
+    controller.hears('feedback_card', 'message,direct_message', async (bot, message) => {
+        //  await bot.reply(message, "Please, compile the following feedback card");
         await bot.reply(message, {
             text: 'Best Wishes from Paola Mancini',
             attachments: [
@@ -63,25 +63,25 @@ controller.hears('feedback_card', 'message,direct_message', async (bot, message)
             ]
         })
     })
-    
-    
-     
-    
-                   
-     controller.on( 'attachmentActions', async ( bot, message ) => {
 
-             //let hostName = message.value.vmlist;
-       console.log("message: ",message);
-       //  console.log("MESSAGE from: " ,message.personId);
-       //console.log("message: ",message.inputs);
-       
-       let from= message.incoming_message.from.id;
-       var personId = message.personId;
-       console.log("========> from: " +from);
-       console.log("========> personId: " +personId);
- 
 
-        await bot.reply( message, {
+
+
+
+    controller.on('attachmentActions', async (bot, message) => {
+
+        //let hostName = message.value.vmlist;
+        console.log("message: ", message);
+        //  console.log("MESSAGE from: " ,message.personId);
+        //console.log("message: ",message.inputs);
+
+        let from = message.incoming_message.from.id;
+        var personId = message.personId;
+        console.log("========> from: " + from);
+        console.log("========> personId: " + personId);
+
+
+        await bot.reply(message, {
             text: 'Answer',
             attachments: [
                 {
@@ -89,11 +89,11 @@ controller.hears('feedback_card', 'message,direct_message', async (bot, message)
                     'content': {
                         'type': 'AdaptiveCard',
                         'version': '1.0',
-                         "body": [
+                        "body": [
                             {
                                 "type": "TextBlock",
                                 "wrap": true,
-                                "text": "Message sent! Thank you "+'email',
+                                "text": "Message sent! Thank you " + 'email',
                                 "horizontalAlignment": "Center",
                                 "color": "Accent",
                                 "weight": "Bolder"
@@ -106,6 +106,7 @@ controller.hears('feedback_card', 'message,direct_message', async (bot, message)
         })
     })
 
-    controller.commandHelp.push( { command: 'feedback_card', text: 'Demo interactive adaptive cards' } );
+    console.log("#### Message.id= " + message);
+    controller.commandHelp.push({ command: 'feedback_card', text: 'Demo interactive adaptive cards' });
 
 }
