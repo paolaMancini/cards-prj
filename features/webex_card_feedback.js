@@ -80,12 +80,6 @@ controller.hears('feedback_card', 'message,direct_message', async (bot, message)
        console.log("========> from: " +from);
        console.log("========> personId: " +personId);
  
-      bot.startPrivateConversation({
-                    user: 'personId'
-                },  )
- 
-    
-         console.log ("Done ==============================================>");
 
         await bot.reply( message, {
             text: 'Answer',
