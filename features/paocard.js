@@ -35,7 +35,7 @@ module.exports = function (controller) {
                                             "items": [
                                                 {
                                                     "type": "Image",
-                                                    "url": `${process.env.PUBLIC_ADDRESS}/www/uff-api.jpg`,
+                                                    "url": `${process.env.PUBLIC_ADDRESS}/www/pao.jpg`,
                                                     "size": "Small",
                                                     "style": "Person"
                                                 }
@@ -77,7 +77,7 @@ module.exports = function (controller) {
                                 },
                                 {
                                     "type": "Image",
-                                    "url": "https://i.pinimg.com/736x/17/9c/fc/179cfcd504475b3df212495cf9012e0e.jpg",
+                                    "url": `${process.env.PUBLIC_ADDRESS}/www/uff-api.jpg`,
                                     "size": "auto"
                                 },
                                 {
