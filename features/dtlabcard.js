@@ -260,11 +260,11 @@ module.exports = function (controller) {
                             },
                             {
                                 "type": "Image",
-                                "altText": "",
                                 "url": "https://app-cards-prj.herokuapp.com/www/uff-api.png",
+                                "size": "auto",
                                 "horizontalAlignment": "Center",
-                                "spacing": "None",
-                                "separator": true
+                                "backgroundColor": " ",
+                                "spacing": "None"
                             },
                             {
                                 "type": "TextBlock",
