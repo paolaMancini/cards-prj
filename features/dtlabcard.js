@@ -271,19 +271,19 @@ module.exports = function (controller) {
                             {
                                 "type": "TextBlock",
                                 "text": "... DEL RESTO",
-                                "spacing": "Small",
+                                "spacing": "None",
                                 "horizontalAlignment": "Center",
                                 "size": "Small",
                                 "weight": "Bolder"
                             },
                             {
                                 "type": "TextBlock",
-                                "text": "\"Chi vuole il miele deve avere il coraggio di affrontare le API\"   \n (Proverbio africano)",
+                                "text": "\"Chi vuole il miele deve avere il coraggio di affrontare le API\"   (Proverbio africano)",
                                 "weight": "Bolder",
                                 "size": "Small",
                                 "horizontalAlignment": "Center",
                                 "wrap": true,
-                                "spacing": "Small",
+                                "spacing": "None",
                                 "maxLines": 4,
                                 "color": "Good"
                             },
@@ -326,7 +326,7 @@ module.exports = function (controller) {
                                                     "type": "TextBlock",
                                                     "text": "... La domanda era retorica ...  \nInizieremo lo stesso ma tu verrai segnalato alle autorità ...",
                                                     "color": "Warning",
-                                                    "maxLines": 2,
+                                                    "maxLines": 3,
                                                     "wrap": true,
                                                     "horizontalAlignment": "Center"
                                                 }
@@ -334,7 +334,8 @@ module.exports = function (controller) {
                                         },
                                         "style": "destructive"
                                     }
-                                ]
+                                ],
+                                "isVisible": false
                             }
                         ],
                         '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json'
