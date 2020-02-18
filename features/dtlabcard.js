@@ -36,7 +36,7 @@ module.exports = function (controller) {
                                             "items": [
                                                 {
                                                     "type": "Image",
-                                                    "url": "https://app-cards-prj.herokuapp.com/www/pao.png",
+                                                    "url": `${process.env.PUBLIC_ADDRESS}/www/pao.png`,
                                                     "size": "Small",
                                                     "style": "Person"
                                                 }
@@ -84,13 +84,11 @@ module.exports = function (controller) {
                                 },
                                 {
                                     "type": "Image",
-                                    "url": "https://app-cards-prj.herokuapp.com/www/uff-api.png",
+                                    "url": `${process.env.PUBLIC_ADDRESS}/www/uff-api.png`,
                                     "size": "auto",
                                     "horizontalAlignment": "Center",
-                                    "backgroundColor": " ",
-                                    "spacing": "Small",
-                                    "height": "159px"
-                                },
+                                     
+                                } ,
                                 {
                                     "type": "TextBlock",
                                     "text": "... DEL RESTO",
@@ -133,7 +131,8 @@ module.exports = function (controller) {
                                                         "url": "https://cdn11.bigcommerce.com/s-jd2vdz6ehx/images/stencil/1280x1280/products/2011/7993/enjoy-the-journey__94235.1573244540.jpg?c=2",
                                                         "horizontalAlignment": "Center",
                                                         "height": "stretch",
-                                                        "size": "Large"
+                                                        "size": "Large",
+                                                        "wrap": true
                                                     }
                                                 ]
                                             }
