@@ -177,6 +177,6 @@ module.exports = function (controller) {
 
 
 
-    controller.commandHelp.push({ command: 'xmas_card', text: 'Demo with interactive adaptive cards. Just Paola can use this command' });
+    controller.commandHelp.push({ command: 'pao-ecard', text: 'Demo with interactive adaptive cards. Just Paola can use this command' });
 
 }

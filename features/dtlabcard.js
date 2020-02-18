@@ -64,7 +64,11 @@ module.exports = function (controller) {
                                                 }
                                             ]
                                         }
-                                    ]
+                                    ],
+                                    "spacing": "Small",
+                                    "style": "default",
+                                    "bleed": true,
+                                    "height": "stretch"
                                 },
                                 {
                                     "type": "TextBlock",
@@ -75,7 +79,8 @@ module.exports = function (controller) {
                                     "size": "Small",
                                     "id": "indovina",
                                     "wrap": true,
-                                    "maxLines": 3
+                                    "maxLines": 3,
+                                    "spacing": "Small"
                                 },
                                 {
                                     "type": "Image",
@@ -83,12 +88,13 @@ module.exports = function (controller) {
                                     "size": "auto",
                                     "horizontalAlignment": "Center",
                                     "backgroundColor": " ",
-                                    "spacing": "Medium"
+                                    "spacing": "Small",
+                                    "height": "159px"
                                 },
                                 {
                                     "type": "TextBlock",
-                                    "text": "... Del resto ...",
-                                    "spacing": "ExtraLarge",
+                                    "text": "... DEL RESTO",
+                                    "spacing": "Small",
                                     "horizontalAlignment": "Center",
                                     "size": "Small",
                                     "weight": "Bolder"
@@ -98,7 +104,7 @@ module.exports = function (controller) {
                                     "text": "\"Chi vuole il miele deve avere il coraggio di affrontare le API\"   \n (Proverbio africano)",
                                     "weight": "Bolder",
                                     "size": "Small",
-                                    "horizontalAlignment": "Left",
+                                    "horizontalAlignment": "Center",
                                     "wrap": true,
                                     "spacing": "Small",
                                     "maxLines": 4,
@@ -106,7 +112,9 @@ module.exports = function (controller) {
                                 },
                                 {
                                     "type": "TextBlock",
-                                    "text": "SEI PRONTO AD INIZIARE ????"
+                                    "text": "SEI PRONTO AD INIZIARE ????",
+                                    "spacing": "Small",
+                                    "weight": "Bolder"
                                 },
                                 {
                                     "type": "ActionSet",
@@ -123,7 +131,9 @@ module.exports = function (controller) {
                                                         "type": "Image",
                                                         "altText": "",
                                                         "url": "https://cdn11.bigcommerce.com/s-jd2vdz6ehx/images/stencil/1280x1280/products/2011/7993/enjoy-the-journey__94235.1573244540.jpg?c=2",
-                                                        "horizontalAlignment": "Center"
+                                                        "horizontalAlignment": "Center",
+                                                        "height": "stretch",
+                                                        "size": "Large"
                                                     }
                                                 ]
                                             }
@@ -137,13 +147,15 @@ module.exports = function (controller) {
                                                 "body": [
                                                     {
                                                         "type": "TextBlock",
-                                                        "text": "... La domanda era retorica ...  Iniziamo lo stesso ma tu verrai segnalato alle autorità ...",
+                                                        "text": "... La domanda era retorica ...  \nInizieremo lo stesso ma tu verrai segnalato alle autorità ...",
                                                         "color": "Warning",
                                                         "maxLines": 2,
-                                                        "wrap": true
+                                                        "wrap": true,
+                                                        "horizontalAlignment": "Center"
                                                     }
                                                 ]
-                                            }
+                                            },
+                                            "style": "destructive"
                                         }
                                     ]
                                 }
