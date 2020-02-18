@@ -53,13 +53,14 @@ module.exports = function (controller) {
                                                     "wrap": true,
                                                     "spacing": "Small",
                                                     "horizontalAlignment": "Left",
-                                                    "size": "Medium",
+                                                    "size": "Small",
                                                     "color": "Accent"
                                                 },
                                                 {
                                                     "type": "TextBlock",
                                                     "text": "Senior Software Developer & DevNet Evangelist",
-                                                    "spacing": "None"
+                                                    "spacing": "None",
+                                                    "size": "Small"
                                                 }
                                             ]
                                         }
@@ -71,7 +72,7 @@ module.exports = function (controller) {
                                     "weight": "Bolder",
                                     "color": "Warning",
                                     "horizontalAlignment": "Center",
-                                    "size": "Medium",
+                                    "size": "Small",
                                     "id": "indovina",
                                     "wrap": true,
                                     "maxLines": 3
@@ -89,14 +90,14 @@ module.exports = function (controller) {
                                     "text": "... Del resto ...",
                                     "spacing": "ExtraLarge",
                                     "horizontalAlignment": "Center",
-                                    "size": "Medium",
+                                    "size": "Small",
                                     "weight": "Bolder"
                                 },
                                 {
                                     "type": "TextBlock",
-                                    "text": "\n \"Chi vuole il miele deve avere il coraggio di affrontare le API\"                  (Proverbio africano)",
+                                    "text": "\"Chi vuole il miele deve avere il coraggio di affrontare le API\"   \n (Proverbio africano)",
                                     "weight": "Bolder",
-                                    "size": "Medium",
+                                    "size": "Small",
                                     "horizontalAlignment": "Left",
                                     "wrap": true,
                                     "spacing": "Small",
@@ -104,32 +105,49 @@ module.exports = function (controller) {
                                     "color": "Good"
                                 },
                                 {
-                                    "type": "ColumnSet",
-                                    "columns": [
+                                    "type": "TextBlock",
+                                    "text": "SEI PRONTO AD INIZIARE ????"
+                                },
+                                {
+                                    "type": "ActionSet",
+                                    "spacing": "None",
+                                    "actions": [
                                         {
-                                            "type": "Column",
-                                            "width": 2,
-                                            "items": [
-                                                {
-                                                    "type": "TextBlock",
-                                                    "text": "New TextBlock"
-                                                },
-                                                {
-                                                    "type": "Input.Text",
-                                                    "id": "myName",
-                                                    "placeholder": "..."
-                                                }
-                                            ]
+                                            "type": "Action.ShowCard",
+                                            "title": "SI",
+                                            "card": {
+                                                "type": "AdaptiveCard",
+                                                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                                                "body": [
+                                                    {
+                                                        "type": "Image",
+                                                        "altText": "",
+                                                        "url": "https://cdn11.bigcommerce.com/s-jd2vdz6ehx/images/stencil/1280x1280/products/2011/7993/enjoy-the-journey__94235.1573244540.jpg?c=2",
+                                                        "horizontalAlignment": "Center"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "Action.ShowCard",
+                                            "title": "NO",
+                                            "card": {
+                                                "type": "AdaptiveCard",
+                                                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                                                "body": [
+                                                    {
+                                                        "type": "TextBlock",
+                                                        "text": "... La domanda era retorica ...  Iniziamo lo stesso ma tu verrai segnalato alle autorità ...",
+                                                        "color": "Warning",
+                                                        "maxLines": 2,
+                                                        "wrap": true
+                                                    }
+                                                ]
+                                            }
                                         }
                                     ]
                                 }
                             ],
-                            "actions": [
-                                {
-                                    "type": "Action.Submit",
-                                    "title": "Send"
-                                }
-                            ]
 
                         }
                     }
