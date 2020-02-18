@@ -166,7 +166,7 @@ module.exports = function (controller) {
                 ]
             })
         } else {
-            await bot.reply(message, "Sorry! Only Paola is authorized to ask for xmas_card!");
+            await bot.reply(message, "Sorry! Only Paola is authorized to ask for this card!");
         }
 
     })
@@ -199,11 +199,142 @@ module.exports = function (controller) {
                         "body": [
                             {
                                 "type": "TextBlock",
+                                "text": "Webex Teams Workshop  ",
+                                "weight": "Bolder",
+                                "size": "Medium",
+                                "horizontalAlignment": "Center"
+                            },
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": "auto",
+                                        "items": [
+                                            {
+                                                "type": "Image",
+                                                "url": "https://app-cards-prj.herokuapp.com/www/pao.png",
+                                                "size": "Small",
+                                                "style": "Person"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": "stretch",
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "Paola Mancini",
+                                                "weight": "Bolder",
+                                                "wrap": true,
+                                                "spacing": "Small",
+                                                "horizontalAlignment": "Left",
+                                                "size": "Small",
+                                                "color": "Accent"
+                                            },
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "Senior Software Developer & DevNet Evangelist",
+                                                "spacing": "None",
+                                                "size": "Small"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "spacing": "Small",
+                                "style": "default",
+                                "bleed": true,
+                                "height": "stretch"
+                            },
+                            {
+                                "type": "TextBlock",
+                                "text": "SO COME VI SENTITE ALL'IDEA DI SEGUIRE IL WORKSHOP ......",
+                                "weight": "Bolder",
+                                "color": "Warning",
+                                "horizontalAlignment": "Center",
+                                "size": "Small",
+                                "id": "indovina",
                                 "wrap": true,
-                                "text": "Message sent! Thank you " + `${person.displayName}`,
-                                "horizontalAlignment": "Left",
-                                "color": "Accent",
+                                "maxLines": 3,
+                                "spacing": "Small"
+                            },
+                            {
+                                "type": "Image",
+                                "url": "https://app-cards-prj.herokuapp.com/www/uff-api.png",
+                                "size": "auto",
+                                "horizontalAlignment": "Center",
+                                "backgroundColor": " ",
+                                "spacing": "Small",
+                                "height": "159px"
+                            },
+                            {
+                                "type": "TextBlock",
+                                "text": "... DEL RESTO",
+                                "spacing": "Small",
+                                "horizontalAlignment": "Center",
+                                "size": "Small",
                                 "weight": "Bolder"
+                            },
+                            {
+                                "type": "TextBlock",
+                                "text": "\"Chi vuole il miele deve avere il coraggio di affrontare le API\"   \n (Proverbio africano)",
+                                "weight": "Bolder",
+                                "size": "Small",
+                                "horizontalAlignment": "Center",
+                                "wrap": true,
+                                "spacing": "Small",
+                                "maxLines": 4,
+                                "color": "Good"
+                            },
+                            {
+                                "type": "TextBlock",
+                                "text": "SEI PRONTO AD INIZIARE ????",
+                                "spacing": "Small",
+                                "weight": "Bolder"
+                            },
+                            {
+                                "type": "ActionSet",
+                                "spacing": "None",
+                                "actions": [
+                                    {
+                                        "type": "Action.ShowCard",
+                                        "title": "SI",
+                                        "card": {
+                                            "type": "AdaptiveCard",
+                                            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                                            "body": [
+                                                {
+                                                    "type": "Image",
+                                                    "altText": "",
+                                                    "url": "https://cdn11.bigcommerce.com/s-jd2vdz6ehx/images/stencil/1280x1280/products/2011/7993/enjoy-the-journey__94235.1573244540.jpg?c=2",
+                                                    "horizontalAlignment": "Center",
+                                                    "height": "stretch",
+                                                    "size": "Large"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "Action.ShowCard",
+                                        "title": "NO",
+                                        "card": {
+                                            "type": "AdaptiveCard",
+                                            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                                            "body": [
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "... La domanda era retorica ...  \nInizieremo lo stesso ma tu verrai segnalato alle autorità ...",
+                                                    "color": "Warning",
+                                                    "maxLines": 2,
+                                                    "wrap": true,
+                                                    "horizontalAlignment": "Center"
+                                                }
+                                            ]
+                                        },
+                                        "style": "destructive"
+                                    }
+                                ]
                             }
                         ],
                         '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json'
@@ -211,6 +342,7 @@ module.exports = function (controller) {
                 }
             ]
         });
+
         setTimeout(async () => {
             let res = await bot.deleteMessage(reply);
         }, 5000);

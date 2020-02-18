@@ -75,7 +75,7 @@ module.exports = function (controller) {
                 ]
             })
         } else {
-            await bot.reply(message, 'Sorry! Only Paola is authorized to ask for xmas_card!');
+            await bot.reply(message, 'Sorry! Only Paola is authorized to ask for this card!');
         }
 
     })
