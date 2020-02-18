@@ -228,16 +228,15 @@ module.exports = function (controller) {
                                                 "text": "Paola Mancini",
                                                 "weight": "Bolder",
                                                 "wrap": true,
-                                                "spacing": "Small",
+                                                "spacing": "None",
                                                 "horizontalAlignment": "Left",
-                                                "size": "Small",
                                                 "color": "Accent"
                                             },
                                             {
                                                 "type": "TextBlock",
                                                 "text": "Senior Software Developer & DevNet Evangelist",
-                                                "spacing": "None",
-                                                "size": "Small"
+                                                "spacing": "Small",
+                                                "separator": true
                                             }
                                         ]
                                     }
@@ -257,28 +256,28 @@ module.exports = function (controller) {
                                 "id": "indovina",
                                 "wrap": true,
                                 "maxLines": 3,
-                                "spacing": "Small"
+                                "separator": true
                             },
                             {
                                 "type": "Image",
+                                "altText": "",
                                 "url": "https://app-cards-prj.herokuapp.com/www/uff-api.png",
                                 "horizontalAlignment": "Center",
-                                "backgroundColor": " ",
-                                "spacing": "Small"
+                                "spacing": "None",
+                                "separator": true
                             },
                             {
                                 "type": "TextBlock",
                                 "text": "... DEL RESTO",
                                 "spacing": "None",
                                 "horizontalAlignment": "Center",
-                                "size": "Small",
-                                "weight": "Bolder"
+                                "weight": "Bolder",
+                                "separator": true
                             },
                             {
                                 "type": "TextBlock",
                                 "text": "\"Chi vuole il miele deve avere il coraggio di affrontare le API\"   (Proverbio africano)",
                                 "weight": "Bolder",
-                                "size": "Small",
                                 "horizontalAlignment": "Center",
                                 "wrap": true,
                                 "spacing": "None",
@@ -289,7 +288,8 @@ module.exports = function (controller) {
                                 "type": "TextBlock",
                                 "text": "SEI PRONTO AD INIZIARE ????",
                                 "spacing": "Small",
-                                "weight": "Bolder"
+                                "weight": "Bolder",
+                                "separator": true
                             },
                             {
                                 "type": "ActionSet",
@@ -322,13 +322,16 @@ module.exports = function (controller) {
                                             "body": [
                                                 {
                                                     "type": "TextBlock",
-                                                    "text": "... La domanda era retorica ...  \nInizieremo lo stesso ma tu verrai segnalato alle autorità ...",
+                                                    "text": "... LA DOMANDA ERA RETORICA ...     Inizieremo lo stesso ma tu verrai segnalato alle autorità ...",
                                                     "color": "Warning",
-                                                    "maxLines": 3,
+                                                    "maxLines": 4,
                                                     "wrap": true,
-                                                    "horizontalAlignment": "Center"
+                                                    "horizontalAlignment": "Center",
+                                                    "fontType": "Monospace",
+                                                    "weight": "Bolder"
                                                 }
-                                            ]
+                                            ],
+                                            "verticalContentAlignment": "Center"
                                         },
                                         "style": "destructive"
                                     }
