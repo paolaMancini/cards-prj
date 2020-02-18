@@ -258,13 +258,16 @@ module.exports = function (controller) {
                                 "maxLines": 3,
                                 "separator": true
                             },
+                            
                             {
                                 "type": "Image",
                                 "url": `${controller.public_url}/www/uff-api.png`,
-                                "size": "auto",
+                                "size": "Large",
                                 "horizontalAlignment": "Center",
                                 "backgroundColor": " ",
-                                "spacing": "None"
+                                "spacing": "Small",
+                                "height": "stretch",
+                                "separator": true
                             },
                             {
                                 "type": "TextBlock",
