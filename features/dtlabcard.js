@@ -262,11 +262,9 @@ module.exports = function (controller) {
                             {
                                 "type": "Image",
                                 "url": "https://app-cards-prj.herokuapp.com/www/uff-api.png",
-                                "size": "auto",
                                 "horizontalAlignment": "Center",
                                 "backgroundColor": " ",
-                                "spacing": "Small",
-                                "height": "159px"
+                                "spacing": "Small"
                             },
                             {
                                 "type": "TextBlock",
