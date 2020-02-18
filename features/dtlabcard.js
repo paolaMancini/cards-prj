@@ -213,7 +213,7 @@ module.exports = function (controller) {
                                         "items": [
                                             {
                                                 "type": "Image",
-                                                "url": "https://app-cards-prj.herokuapp.com/www/pao.png",
+                                                "url": `${controller.public_url}/www/www/pao.png`,
                                                 "size": "Small",
                                                 "style": "Person"
                                             }
@@ -260,7 +260,7 @@ module.exports = function (controller) {
                             },
                             {
                                 "type": "Image",
-                                "url": "https://app-cards-prj.herokuapp.com/www/uff-api.png",
+                                "url": `${controller.public_url}/www/uff-api.png`,
                                 "size": "auto",
                                 "horizontalAlignment": "Center",
                                 "backgroundColor": " ",
