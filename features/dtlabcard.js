@@ -107,7 +107,7 @@ module.exports = function (controller) {
                                     "wrap": true,
                                     "spacing": "Small",
                                     "color": "Good",
-                                    "maxLines": 2,
+                                    "maxLines": 3,
                                     "fontType": "Monospace"
                                 },
                                 {
