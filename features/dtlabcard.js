@@ -74,7 +74,7 @@ module.exports = function (controller) {
                                     "type": "TextBlock",
                                     "text": "SO COME VI SENTITE ALL'IDEA DI SEGUIRE IL WORKSHOP ......",
                                     "weight": "Bolder",
-                                    "color": "Warning",
+                                    "color": "Good",
                                     "horizontalAlignment": "Center",
                                     "size": "Small",
                                     "id": "indovina",
@@ -97,16 +97,18 @@ module.exports = function (controller) {
                                     "size": "Small",
                                     "weight": "Bolder"
                                 },
+                                
                                 {
                                     "type": "TextBlock",
-                                    "text": "\"Chi vuole il miele deve avere il coraggio di affrontare le API\"   \n (Proverbio africano)",
+                                    "text": "\"Chi vuole il miele deve avere il coraggio di affrontare le API\n  (Proverbio africano)",
                                     "weight": "Bolder",
                                     "size": "Small",
                                     "horizontalAlignment": "Center",
                                     "wrap": true,
                                     "spacing": "Small",
-                                    "maxLines": 4,
-                                    "color": "Good"
+                                    "color": "Good",
+                                    "maxLines": 2,
+                                    "fontType": "Monospace"
                                 },
                                 {
                                     "type": "TextBlock",

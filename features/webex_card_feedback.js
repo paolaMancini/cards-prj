@@ -10,7 +10,7 @@ module.exports = function (controller) {
         let from = await bot.api.people.get(message.actorId);
         console.log("Message from: ", from.displayName);
 
-        if (from.trim === 'Paola Mancini'.trim) {
+         if (from.displayName.trim === "Paola Mancini".trim) {
             await bot.reply(message, {
                 text: 'Best Wishes from Paola Mancini',
                 attachments: [
